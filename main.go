@@ -11,16 +11,14 @@ func main() {
 	}
 	str := []byte("CFAEIQAFPGBZO")
 	for j := 0; j < 11; j++ {
-		fmt.Println("Nilai j = ", j)
 		if j == 5 {
 			for idx, val := range str {
 				if idx%2 == 0 {
-					fmt.Printf("Character %U %q starts at byte position %d", val, val, idx)
-				} else {
-					fmt.Printf("\n")
+					fmt.Printf("Character %U %q starts at byte position %d \n", val, val, idx)
 				}
 			}
-			fmt.Printf("\n")
+		} else {
+			fmt.Println("Nilai j = ", j)
 		}
 	}
 }
