@@ -92,8 +92,6 @@ func PoolingFuncSync1(iterator int, mutex *sync.Mutex, data1, data2 dataDynamic)
 			}
 		}()
 	}
-	go func() {
-	}()
 }
 
 func OutText(data dataDynamic) {
