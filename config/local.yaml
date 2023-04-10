@@ -1,5 +1,5 @@
 server:
-  name: final-project
+  name: final-chapter2
   env: local
   http:
     port: 9090

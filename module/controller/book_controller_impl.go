@@ -153,11 +153,15 @@ func (bc *BookControllerImpl) UpdateBook(ctx *gin.Context) {
 		helper.CatchError(ctx, errors.New("BR").Error())
 		return
 	}
-	err = bc.BookService.Update(ctx, req)
+
+	data, err := bc.BookService.Update(ctx, req)
+
 	if err != nil {
 		helper.CatchError(ctx, err.Error())
 		return
 	}
+
+	resp.Data = data
 	ctx.JSON(http.StatusOK, resp)
 }
 

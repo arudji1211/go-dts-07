@@ -61,13 +61,14 @@ func (b *BookRepositoryImplMap) CreateBook(book model.Book) (model.Book, error) 
 	return b.Data[uint64(counter)], nil
 }
 
-func (b *BookRepositoryImplMap) UpdateBook(book model.Book) error {
+func (b *BookRepositoryImplMap) UpdateBook(book model.Book) (bookOut model.Book, err error) {
 	if b.Data[uint64(book.Id)].Deleted {
-		err := errors.New("NF")
-		return err
+		err = errors.New("NF")
+		return
 	} else {
 		b.Data[uint64(book.Id)] = book
-		return nil
+		bookOut = b.Data[uint64(book.Id)]
+		return
 	}
 }
 

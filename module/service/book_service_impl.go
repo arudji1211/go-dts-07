@@ -29,24 +29,25 @@ func (bs *BookServiceImpl) Insert(ctx *gin.Context, request model.BookCreateRequ
 	return helper.BookDomainToResp(data), nil
 }
 
-func (bs *BookServiceImpl) Update(ctx *gin.Context, request model.BookUpdateRequest) error {
+func (bs *BookServiceImpl) Update(ctx *gin.Context, request model.BookUpdateRequest) (bookOut model.BookResponse, err error) {
 	var data model.Book
 	data.Author = request.Author
 	data.Desc = request.Desc
 	data.Title = request.Title
 	data.Id = request.Id
 
-	_, err := bs.BookRepository.GetBookById(data.Id)
+	_, err = bs.BookRepository.GetBookById(data.Id)
 	if err != nil {
-		return err
+		return
 	}
 
-	err = bs.BookRepository.UpdateBook(data)
+	data, err = bs.BookRepository.UpdateBook(data)
 	if err != nil {
-		return err
+		return
 	}
+	bookOut = helper.BookDomainToResp(data)
 
-	return nil
+	return
 }
 
 func (bs *BookServiceImpl) Delete(ctx *gin.Context, id int) error {

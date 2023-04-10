@@ -5,6 +5,7 @@ import (
 
 	"github.com/arudji1211/go-dts-07/module/model"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 )
 
 type UserRepositoryImplGorm struct {
@@ -54,8 +55,8 @@ func (b *UserRepositoryImplGorm) CreateBook(book model.Book) (model.Book, error)
 	return book, nil
 }
 
-func (b *UserRepositoryImplGorm) UpdateBook(bookin model.Book) (err error) {
-	tx := b.db.Table("books").Model(&model.Book{}).Where("id = ?", bookin.Id).Updates(&bookin)
+func (b *UserRepositoryImplGorm) UpdateBook(bookin model.Book) (bookOut model.Book, err error) {
+	tx := b.db.Table("books").Model(&bookOut).Clauses(clause.Returning{}).Where("id = ?", bookin.Id).Updates(&bookin)
 	if err = tx.Error; err != nil {
 		return
 	}
