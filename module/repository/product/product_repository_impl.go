@@ -30,6 +30,17 @@ func (p *ProductRepositoryImpl) GetAll(ctx context.Context) (productOut []produc
 	return
 }
 
+func (p *ProductRepositoryImpl) GetAllByUserId(ctx context.Context, userId int) (productOut []product.Product, err error) {
+	// panic("not implemented") // TODO: Implement
+	tx := p.db.Model(&product.Product{}).Where("user_id = ?", userId).Find(&productOut).Order("updated_at ASC")
+
+	if err = tx.Error; err != nil {
+		return
+	}
+
+	return
+}
+
 func (p *ProductRepositoryImpl) GetById(ctx context.Context, idProduct int) (productOut product.Product, err error) {
 	// panic("not implemented") // TODO: Implement
 	tx := p.db.Model(&product.Product{}).Where("id = ?", idProduct).Find(&productOut)
@@ -39,7 +50,7 @@ func (p *ProductRepositoryImpl) GetById(ctx context.Context, idProduct int) (pro
 	}
 
 	if productOut.Id <= 0 {
-		err = errors.New("NF")
+		err = errors.New("Data is Not Found")
 		return
 	}
 

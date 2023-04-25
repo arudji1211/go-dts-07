@@ -134,6 +134,30 @@ paths:
       summary: delete product example
       tags:
       - products
+  /product/getall:
+    get:
+      consumes:
+      - application/json
+      description: how to get all Product
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/reponse.WebResponseSuccess'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/product.Product'
+                  type: array
+              type: object
+      security:
+      - Bearer: []
+      summary: Get All Product example
+      tags:
+      - Product
   /product/getone/{id}:
     get:
       consumes:

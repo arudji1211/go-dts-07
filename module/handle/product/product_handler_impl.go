@@ -22,6 +22,43 @@ func NewProductHandler(ProductSVC svcProduct.ProductService) ProductHandler {
 	}
 }
 
+// @Summary Get All Product example
+// @Schemes
+// @Security Bearer
+// @Description how to get all Product
+// @Tags products
+// @Accept json
+// @Produce json
+// @Success 200 {object} responseTemplate.WebResponseSuccess{data=[]modelProduct.Product}
+// @Router /product/getall [get]
+func (p *ProductHandlerImpl) GetAll(ctx *gin.Context) {
+	// panic("not implemented") // TODO: Implement
+	logger.LogMyApp("i", "Product Handler Invoked", "ProductHandler - Getall", nil)
+
+	logger.LogMyApp("i", "Hit Product Service", "ProductHandler - Getall", nil)
+	accessClaim, err := helper.GetIdentityFromCtx(ctx)
+	if err != nil {
+		return
+	}
+
+	data, _ := p.ProductSVC.GetAll(ctx, accessClaim.AccessClaims.UserId)
+	if len(data) < 1 {
+		logger.LogMyApp("i", "Render Response", "ProductHandler - Getall", nil)
+		ctx.JSON(http.StatusNotFound, responseTemplate.WebResponseFailed{
+			Message: "Data Is Not Found",
+			Error:   "Data Is Not Found",
+		})
+		return
+	}
+	logger.LogMyApp("i", "Render Response", "ProductHandler - Getall", nil)
+	ctx.JSON(http.StatusOK, responseTemplate.WebResponseSuccess{
+		Message: "Success GET all Product",
+		Data:    data,
+	})
+
+	return
+}
+
 // @Summary Get product example
 // @Schemes
 // @Security Bearer
