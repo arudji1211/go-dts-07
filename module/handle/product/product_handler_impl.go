@@ -41,7 +41,7 @@ func (p *ProductHandlerImpl) GetAll(ctx *gin.Context) {
 		return
 	}
 
-	data, _ := p.ProductSVC.GetAll(ctx, accessClaim.AccessClaims.UserId)
+	data, _ := p.ProductSVC.GetAll(ctx, accessClaim.AccessClaims.UserId, accessClaim.AccessClaims.Role)
 	if len(data) < 1 {
 		logger.LogMyApp("i", "Render Response", "ProductHandler - Getall", nil)
 		ctx.JSON(http.StatusNotFound, responseTemplate.WebResponseFailed{

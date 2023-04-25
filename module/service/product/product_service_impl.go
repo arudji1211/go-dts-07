@@ -24,7 +24,7 @@ func NewProductService(ProductRepo ProductRepo.ProductRepository, validate *vali
 	}
 }
 
-func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int) (Photos []ProductModel.Product, err error) {
+func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int, role string) (Photos []ProductModel.Product, err error) {
 	//logging
 	MyLog.LogMyApp("i", "Product Service Invoked", "ProductService - GetAll", nil)
 
@@ -33,9 +33,9 @@ func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int) (Photos []Pro
 		return
 	}
 
-	if accessClaim.AccessClaims.Role == "user" {
+	if role == "user" {
 		Photos, err = Cs.ProductRepo.GetAllByUserId(ctx, accessClaim.AccessClaims.UserId)
-	} else if accessClaim.AccessClaims.Role == "admin" {
+	} else if role == "admin" {
 		Photos, err = Cs.ProductRepo.GetAll(ctx)
 	} else {
 		ctx.AbortWithStatusJSON(http.StatusInternalServerError, responseTemplate.WebResponseFailed{

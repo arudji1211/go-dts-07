@@ -6,7 +6,7 @@ import (
 )
 
 type ProductService interface {
-	GetAll(ctx *gin.Context, idUser int) ([]product.Product, error)
+	GetAll(ctx *gin.Context, idUser int, role string) ([]product.Product, error)
 	GetById(ctx *gin.Context, idProduct int) (product.Product, error)
 	Create(ctx *gin.Context, productIn product.Product) (productOut product.Product, err error)
 	Update(ctx *gin.Context, productIn product.Product, idUser int) (productOut product.Product, err error)
