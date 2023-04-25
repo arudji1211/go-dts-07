@@ -118,7 +118,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Product"
+                    "products"
                 ],
                 "summary": "Get All Product example",
                 "responses": {

@@ -63,6 +63,7 @@ func VerifyAndParse(token string, Claims any) (err error) {
 	verifiedToken, err := jwt.Verify(jwt.HS256, SharedKey, []byte(token))
 	if err != nil {
 		MyLog.LogMyApp("e", "Eror When Verify Token", "Helper - GenerateToken", nil)
+		return
 	}
 
 	err = verifiedToken.Claims(&Claims)

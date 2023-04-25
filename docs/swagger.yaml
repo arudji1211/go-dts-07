@@ -157,7 +157,7 @@ paths:
       - Bearer: []
       summary: Get All Product example
       tags:
-      - Product
+      - products
   /product/getone/{id}:
     get:
       consumes:
