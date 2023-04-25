@@ -3,7 +3,7 @@ package product
 import (
 	"net/http"
 
-	"github.com/arudji1211/go-dts-07/module/helper"
+
 	ProductModel "github.com/arudji1211/go-dts-07/module/model/product"
 	ProductRepo "github.com/arudji1211/go-dts-07/module/repository/product"
 	MyLog "github.com/arudji1211/go-dts-07/pkg/logger"
