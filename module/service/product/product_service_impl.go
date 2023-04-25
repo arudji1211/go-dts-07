@@ -28,13 +28,8 @@ func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int, role string) 
 	//logging
 	MyLog.LogMyApp("i", "Product Service Invoked", "ProductService - GetAll", nil)
 
-	accessClaim, err := helper.GetIdentityFromCtx(ctx)
-	if err != nil {
-		return
-	}
-
 	if role == "user" {
-		Photos, err = Cs.ProductRepo.GetAllByUserId(ctx, accessClaim.AccessClaims.UserId)
+		Photos, err = Cs.ProductRepo.GetAllByUserId(ctx, idUser)
 	} else if role == "admin" {
 		Photos, err = Cs.ProductRepo.GetAll(ctx)
 	} else {
