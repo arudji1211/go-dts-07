@@ -27,6 +27,11 @@ func (p *ProductRepositoryImpl) GetAll(ctx context.Context) (productOut []produc
 		return
 	}
 
+	if len(productOut) < 1 {
+		err = errors.New("Data Product Not Found")
+		return
+	}
+
 	return
 }
 
@@ -35,6 +40,11 @@ func (p *ProductRepositoryImpl) GetAllByUserId(ctx context.Context, userId int) 
 	tx := p.db.Model(&product.Product{}).Where("user_id = ?", userId).Find(&productOut).Order("updated_at ASC")
 
 	if err = tx.Error; err != nil {
+		return
+	}
+
+	if len(productOut) < 1 {
+		err = errors.New("Data Product Not Found")
 		return
 	}
 

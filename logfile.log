@@ -596,3 +596,41 @@
 {"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-25T21:35:24+07:00"}
 {"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-25T21:35:24+07:00"}
 {"Process":"ProductHandler - GetById","error msg":"Data is Not Found","level":"error","msg":"Error When Hit Photo Service","time":"2023-04-25T21:35:24+07:00"}
+{"Process":"UserHandler - Login","level":"info","msg":"User Handler Invoked","time":"2023-04-26T19:38:03+07:00"}
+{"Process":"UserHandler - Login","level":"info","msg":"Binding JSON data","time":"2023-04-26T19:38:03+07:00"}
+{"Process":"UserHandler - Register","level":"info","msg":"Hit User Service","time":"2023-04-26T19:38:03+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"User Service Invoked","time":"2023-04-26T19:38:03+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Hit Repository to Get user by username","time":"2023-04-26T19:38:03+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Comparing Password","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Generating Token","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Generate JWT Invoked","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate Default Claim","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate ID Claim","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate Id Token","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"UserHandler - Register","level":"info","msg":"rendering response User Service","time":"2023-04-26T19:38:04+07:00"}
+{"Process":"Middleware - JWTMiddleware","level":"info","msg":"Middleware Invoked","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"Middleware - JWTMiddleware","level":"info","msg":"GET TOKEN FROM REQUEST HEADER","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Verify and Parse Claim","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"ProductHandler - Getall","level":"info","msg":"Product Handler Invoked","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"ProductHandler - Getall","level":"info","msg":"Hit Product Service","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"ProductHandler - Getall","level":"info","msg":"Render Response","time":"2023-04-26T19:38:21+07:00"}
+{"Process":"UserHandler - Login","level":"info","msg":"User Handler Invoked","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserHandler - Login","level":"info","msg":"Binding JSON data","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserHandler - Register","level":"info","msg":"Hit User Service","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"User Service Invoked","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Hit Repository to Get user by username","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Comparing Password","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserService - AuthenticateUser","level":"info","msg":"Generating Token","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Generate JWT Invoked","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate Default Claim","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate ID Claim","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Generate Id Token","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"UserHandler - Register","level":"info","msg":"rendering response User Service","time":"2023-04-26T19:38:35+07:00"}
+{"Process":"Middleware - JWTMiddleware","level":"info","msg":"Middleware Invoked","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"Middleware - JWTMiddleware","level":"info","msg":"GET TOKEN FROM REQUEST HEADER","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"Helper - GenerateToken","level":"info","msg":"Starting Verify and Parse Claim","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"ProductHandler - Getall","level":"info","msg":"Product Handler Invoked","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"ProductHandler - Getall","level":"info","msg":"Hit Product Service","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:38:52+07:00"}
+{"Process":"ProductService - GetAll","error msg":"Data Product Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:38:52+07:00"}

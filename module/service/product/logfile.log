@@ -1,0 +1,36 @@
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:32:44+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:32:44+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:33:38+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:33:38+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:45:48+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:45:48+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:47:13+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:47:13+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:48:33+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:48:33+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:56:05+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:56:05+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:58:38+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:58:38+07:00"}
+{"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T18:58:38+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:59:42+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T18:59:42+07:00"}
+{"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T18:59:42+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:01:24+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:01:24+07:00"}
+{"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:01:24+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:02:42+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:03:07+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:03:17+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:03:44+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:03:44+07:00"}
+{"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:03:44+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:24+07:00"}
+{"Process":"ProductService - GetAll","error msg":"Data Product Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:06:24+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:24+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:46+07:00"}
+{"Process":"ProductService - GetAll","error msg":"Data Product Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:06:46+07:00"}
+{"Process":"ProductService - GetAll","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:46+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:46+07:00"}
+{"Process":"ProductService - GetById","level":"info","msg":"Product Service Invoked","time":"2023-04-26T19:06:46+07:00"}
+{"Process":"ProductService - GetById","error msg":"Data is Not Found","level":"error","msg":"Repository Returning Error","time":"2023-04-26T19:06:46+07:00"}

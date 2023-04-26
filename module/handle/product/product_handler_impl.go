@@ -41,15 +41,11 @@ func (p *ProductHandlerImpl) GetAll(ctx *gin.Context) {
 		return
 	}
 
-	data, _ := p.ProductSVC.GetAll(ctx, accessClaim.AccessClaims.UserId, accessClaim.AccessClaims.Role)
-	if len(data) < 1 {
-		logger.LogMyApp("i", "Render Response", "ProductHandler - Getall", nil)
-		ctx.JSON(http.StatusNotFound, responseTemplate.WebResponseFailed{
-			Message: "Data Is Not Found",
-			Error:   "Data Is Not Found",
-		})
+	data, err := p.ProductSVC.GetAll(ctx, accessClaim.AccessClaims.UserId, accessClaim.AccessClaims.Role)
+	if err != nil {
 		return
 	}
+
 	logger.LogMyApp("i", "Render Response", "ProductHandler - Getall", nil)
 	ctx.JSON(http.StatusOK, responseTemplate.WebResponseSuccess{
 		Message: "Success GET all Product",

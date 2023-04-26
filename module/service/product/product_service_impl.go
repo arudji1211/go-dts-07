@@ -3,7 +3,6 @@ package product
 import (
 	"net/http"
 
-	"github.com/arudji1211/go-dts-07/module/helper"
 	ProductModel "github.com/arudji1211/go-dts-07/module/model/product"
 	ProductRepo "github.com/arudji1211/go-dts-07/module/repository/product"
 	MyLog "github.com/arudji1211/go-dts-07/pkg/logger"
@@ -28,13 +27,8 @@ func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int, role string) 
 	//logging
 	MyLog.LogMyApp("i", "Product Service Invoked", "ProductService - GetAll", nil)
 
-	accessClaim, err := helper.GetIdentityFromCtx(ctx)
-	if err != nil {
-		return
-	}
-
 	if role == "user" {
-		Photos, err = Cs.ProductRepo.GetAllByUserId(ctx, accessClaim.AccessClaims.UserId)
+		Photos, err = Cs.ProductRepo.GetAllByUserId(ctx, idUser)
 	} else if role == "admin" {
 		Photos, err = Cs.ProductRepo.GetAll(ctx)
 	} else {
@@ -48,6 +42,10 @@ func (Cs *ProductServiceImpl) GetAll(ctx *gin.Context, idUser int, role string) 
 
 	if err != nil {
 		MyLog.LogMyApp("e", "Repository Returning Error", "ProductService - GetAll", err)
+		ctx.JSON(http.StatusNotFound, responseTemplate.WebResponseFailed{
+			Message: "Data Is Not Found",
+			Error:   err.Error(),
+		})
 		return
 	}
 
